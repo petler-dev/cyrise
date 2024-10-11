@@ -1,0 +1,185 @@
+#footer {
+	background-color: #eaecee;
+	padding: rem-calc(20 0);
+	font-size: rem-calc(16);
+
+	@include media ('>=tablet') {
+		padding: rem-calc(45 0 30)
+	}
+
+	@include media ('>=desktop') {
+		font-size: rem-calc(18);
+	}
+
+	a {
+		@include animate(color);
+
+		&:hover {
+			color: #2951a3;
+			text-decoration: none;
+		}
+	}
+}
+
+.footer-logo {
+	@include animate(opacity);
+
+	max-width: rem-calc(128);
+	width: 100%;
+	padding-left: rem-calc(15);
+
+	@include media ('>=tablet') {
+		padding-left: rem-calc(31);
+	}
+
+	&:hover {
+		opacity: .8;
+	}
+}
+
+.footer-top {
+	padding: rem-calc(0 0 20);
+	border-bottom: 0.0625rem solid #c1c5c9;
+
+	@include media ('>=tablet') {
+		padding: rem-calc(0 0 44);
+	}
+
+	a {
+		font-size: rem-calc(18);
+		color: #333e47;
+	}
+
+	address {
+		max-width: rem-calc(250);
+	}
+}
+
+.footer-bottom {
+	padding-top: rem-calc(21);
+	
+	a {
+		font-size: rem-calc(18);
+		color: #333e47;
+	}
+
+	.wrap {
+		display: flex;
+		align-items: center;
+	}
+}
+
+.footer-title {
+	display: block;
+}
+
+.form-holder {
+	@include media ('>=tablet') {
+		padding-left: rem-calc(67);
+	}
+
+	.footer-title {
+		margin-bottom: rem-calc(13);
+	}
+}
+
+.newsletter-form {
+	.form-control {
+		background-color: transparent;
+		height: auto;
+	}
+
+	.btn {
+		position: relative;
+		border-radius: 0;
+		padding-right: rem-calc(24);
+		padding-left: rem-calc(24);
+		margin-left: rem-calc(-1);
+
+		&:after {
+			content: "\e904";
+			font-family: 'icomoon';
+			font-size: rem-calc(12);
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		&:focus {
+			opacity: .8;
+		}
+	}
+}
+
+.copyright {
+	p {
+		margin-bottom: 0;
+	}
+}
+
+.footer-side {
+	@include media ('>=tablet') {
+		padding-left: rem-calc(64);
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+	}
+}
+
+.privacy {
+	display: block;
+	margin-right: rem-calc(23);
+}
+
+.social-links {
+	@extend %listreset;
+
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+	padding: rem-calc(10 14 5 0);
+	
+
+	@include media ('>=tablet') {
+		padding: rem-calc(10 14 5);
+		max-width: 100%;
+	}
+
+	@include media ('>=desktop') {
+		padding: rem-calc(10 26 5);
+	}
+
+	&:after {
+		content: '';
+		position: absolute;
+		right: 0;
+		background: #b6bbbf;
+		height: 100%;
+		width: rem-calc(1);
+		top: 0;
+	}
+
+	li {
+		padding: rem-calc(0 5 5);
+		line-height: 1;
+
+
+		@include media ('>=desktop') {
+			padding: rem-calc(0 7 5);
+		}
+
+		a {
+			display: block;
+			font-size: rem-calc(21);
+
+			@include media ('>=desktop') {
+				font-size: rem-calc(24);
+			}
+
+			i {
+				display: block;
+			}
+		}
+	}
+}

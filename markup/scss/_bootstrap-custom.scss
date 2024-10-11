@@ -1,0 +1,146 @@
+// custom variables and override bootstrap variables
+
+$body-bg: #fff;
+
+$white:  #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #868e96 !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$gray: #333e47;
+$black:  #000 !default;
+
+$blue:    #2951a3;
+$dark-blue: #2951a3;
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #e83e8c !default;
+$red:     #dc3545 !default;
+$orange:  #fd7e14 !default;
+$yellow:  #ffc107 !default;
+$green:   #28a745 !default;
+$teal:    #20c997 !default;
+$cyan:    #17a2b8 !default;
+
+$colors: () !default;
+$colors: map-merge((
+  "blue":       $blue,
+  "indigo":     $indigo,
+  "purple":     $purple,
+  "pink":       $pink,
+  "red":        $red,
+  "orange":     $orange,
+  "yellow":     $yellow,
+  "green":      $green,
+  "teal":       $teal,
+  "cyan":       $cyan,
+  "white":      $white,
+  "gray":       $gray-600,
+  "gray-dark":  $gray-800
+), $colors);
+
+$primary:       $blue !default;
+$secondary:     $gray-600 !default;
+$success:       $green !default;
+$info:          $cyan !default;
+$warning:       $yellow !default;
+$danger:        $red !default;
+$light:         $gray-100 !default;
+$dark:          $gray-800 !default;
+
+$theme-colors: () !default;
+$theme-colors: map-merge((
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark
+), $theme-colors);
+
+$spacer: 1rem !default;
+$spacers: () !default;
+$spacers: map-merge((
+	0: 0,
+	1: ($spacer * .25),
+	2: ($spacer * .5),
+	3: $spacer,
+	4: ($spacer * 1.5),
+	5: ($spacer * 3),
+	6: ($spacer * 4.5),
+	7: ($spacer * 6),
+	8: ($spacer * 7.5),
+	9: ($spacer * 9),
+	10: ($spacer * 10.5)
+), $spacers);
+
+$base-min-width: 320px;
+
+// This is the default html and body font-size for the base rem value.
+$rem-base: 16px;
+
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+
+$font-family-sans-serif:      'Volte', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-base:            $font-family-sans-serif;
+
+// stylelint-enable value-keyword-case
+$font-size-base:              1.125rem; // Assumes the browser default, typically `16px`
+$line-height-base:            1.45;
+
+$headings-color:              $dark-blue;
+$h1-font-size:                30px;
+$h2-font-size:                30px;
+$h3-font-size:                20px;
+
+// Body
+//
+// Settings for the `<body>` element.
+
+$body-color:                $gray;
+
+// Buttons
+//
+// For each of Bootstrap's buttons, define text, background, and border color.
+
+$btn-padding-y:               7px;
+$btn-padding-x:               25px;
+$btn-font-size:               19px;
+
+$btn-box-shadow:              0;
+$btn-focus-width:             0;
+$btn-focus-box-shadow:        none;
+$btn-active-box-shadow:       0;
+
+// Allows for customizing button radius independently from global border radius
+$btn-border-radius:           5px;
+
+// Forms
+
+$input-padding-y:                       9px;
+$input-color:                           $gray;
+$input-border-color:                    #8e949a;
+$input-box-shadow:                       none;
+
+$input-border-radius:                   0;
+
+$input-focus-border-color:              #8e949a;
+$input-focus-color:                     #8e949a;
+$input-focus-box-shadow:                none;
+$input-focus-color:                     $input-color;
+
+// Cards
+
+$card-border-width:                 0;
+$card-border-color:                 rgba($black, .125) !default;
+$card-border-radius:                0;
+$card-bg:                           #eaecee;
