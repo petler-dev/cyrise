@@ -11,6 +11,20 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" crossorigin="anonymous" defer></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous" defer></script>
 	<script src="js/jquery.main.js" defer></script>
+	<script src="js/form.js" defer></script>
+
+	<style>
+		li::after {
+  background-color: #ccc;
+  transition: background-color 0.4s ease;
+  cursor: pointer;
+}
+
+li.active::after {
+  background-color: #3498db;
+}
+
+	</style>
 </head>
 <body>
 	<div id="wrapper">
@@ -545,13 +559,14 @@
 						</div>
 						<div class="col-md-5">
 							<div class="form-holder">
-								<span class="footer-title">Signup to our Newsletter</span>
-								<form action="#" class="newsletter-form">
+								<span class="footer-title email-form-title">Signup to our Newsletter</span>
+								<form action="subscribe.php" method="POST" class="newsletter-form">
 									<div class="input-group">
-										<input type="email" class="form-control">
-										<button type="submit" class="btn btn-dark"></button>
+									  <input type="email" name="email" class="form-control" required placeholder="Enter your email">
+									  <button type="submit" class="btn btn-dark"></button>
 									</div>
 								</form>
+								<p class="subscription-message" style="display: none;"></p>
 							</div>
 						</div>
 					</div>
